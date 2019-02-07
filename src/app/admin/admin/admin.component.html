@@ -1,0 +1,8 @@
+<mat-tab-group *ngIf="auth.user | async as user" mat-align-tabs="center">
+  <mat-tab label="Administrar tienda" *ngIf="user.role === 'admin' || user.role === 'editor'">
+    <app-products></app-products>
+  </mat-tab>
+  <mat-tab label="Second"> Content 2 </mat-tab>
+  <mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>
+
